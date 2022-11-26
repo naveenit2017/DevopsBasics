@@ -24,4 +24,9 @@ steps:
   inputs:
     containerRegistry: 'Dock2'
     command: 'login'
-    
+- task: Docker@2
+  inputs:
+        containerRegistry: 'Dock2'
+        repository: 'naveenvarma17/azuredevops1'
+        command: 'buildAndPush'
+        Dockerfile: '**/AzureDockerfile'
